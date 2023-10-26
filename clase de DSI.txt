@@ -1,0 +1,107 @@
+Forma de diseñar sofware
+
+Diseño funcional
+*Especificaciones de requisitos
+*Diagrama de secuencia
+*Diagrama de caso de uso
+*Modelo de datos entidad-relacion
+
+
+Diseño de comportamiento
+1. Estados
+2. Eventos
+3. Acciones
+4. Transiciones
+
+Diseño arquitectonico
+*Arquitectura basada en capas
+*Arquitectura cliente-servidor
+*Arquitectura orientada a servicios
+*Arquitectura basado en eventos
+
+
+diseño modelo c4 para visualizar la arquitectura del software
+-contexto
+-componene
+-contenedor
+-codigo 
+
+
+
+
+selectores basico 5 categorias en css
+1.- *    <---- universal
+2.- body <----- etiqueta
+3.- .barra <---- clase  
+4.- .barra:hover <----- descedentes
+5.- 
+
+
+
+
+
+
+
+Lenguaje de modelado unificado y patrones de diseño de software
+-Que es el UML
+Se desarrollo en 1990
+
+Definicion
+es un conjunto de herramientas oara visualizar especificaciones
+
+---programa DIA----
+
+beneficios del uso de UML en el desarrollo de software
+-claridad
+-comunicacion
+-flexibilidad
+-reutilizacion de codigo
+
+Patrones de diseño de software
+clasificacion
+3 categorias de patrones de diseño
+-creacional
+-estructurales
+-comportamiento
+
+como aplicar patrones de diseño como UML
+-identificar
+-modelo
+-implementacion
+
+
+Esquemas de patrones de diseño con UML
+-Factory Method
+-observer
+-strategy
+
+
+
+
+1.-SPA (single page aplication)
+2.-PWA (progessive web application)
+3.-Dinamica
+
+
+HTTP (hyper text tansfor protocol)
+
+
+
+
+
+
+
+
+
+
+
+git status
+git add .
+git status
+git commit -m "Mis primeros cambios"
+git config --global user.email "gjhonguzman18@gmail.com"
+git config --global user.name "JhonGuzman201"
+git remote add origin "link"
+
+git pull origin 
+git push origin master <---- se sube el archivo
