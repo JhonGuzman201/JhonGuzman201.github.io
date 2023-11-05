@@ -1,0 +1,88 @@
+create table genero (
+	id_genero int primary key,
+	tipo_genero varchar(50)
+);
+
+create table estudiante (
+	id_estudiante int primary key,
+	cedula varchar(10),
+	nombre_e varchar(50),
+	apellido_e varchar(50),
+);
+
+create table materia (
+	id_materia int primary key,
+	nombre_materia varchar(50),
+	tipo_materia varchar(20),
+	codigo_materia varchar(15),
+	descripcion text
+);
+
+create table tipo_matricula (
+	id_tipo_matricula int primary key,
+	detalle_matricula varchar(100)
+);
+
+create table ciudad (
+	id_ciudad int primary key,
+	nombre_ciudad varchar(50),
+	estado char(1)
+);
+
+
+
+create table periodo(
+	id_periodo int primary key,
+	nom_periodo varchar(50),
+	fecha_ini date,
+	fecha_fin date 
+);
+
+create table curso(
+	id_curso int primary key,
+	descripcion_curso text,
+	cod_curso int
+);
+
+create table matricula(
+	id_matricula int primary key,
+	id_estudiante int,
+	fecha_materia date,
+	codigo varchar(50),
+	anulado char(1),
+	id_curso int
+)
+
+create table detalle_matricula(
+	detalle_matricula text,
+	id_materia int,
+	id_matricula int,
+	anulado char(1)
+);
+
+
+alter table estudiante add  id_genero int;
+alter table estudiante add constraint constaint_1 foreign key (id_genero) references genero(id_genero);
+
+alter table estudiante add id_ciudad int;
+alter table estudiante add constraint constaint_2 foreign key (id_ciudad) references ciudad(id_ciudad);
+
+alter table matricula add column id_periodo int;
+alter table matricula add constraint constraint_1 foreign key (id_periodo) references matricula(id_matricula);
+
+
+alter table tipo_matricula add column id_materia int;
+alter table tipo_matricula add constraint constraint_1 foreign key (id_materia) references materia(id_materia);
+
+
+alter table matricula add constraint constraint_2 foreign key (id_estudiante) references estudiante(id_estudiante);
+
+
+alter table detalle_matricula add constraint constraint_1 foreign key (id_matricula) references matricula(id_matricula);
+
+
+alter table detalle_matricula add constraint constraint_2 foreign key (id_materia) references materia(id_materia);
+
+
+
+alter table ciudad alter column estado set DEFAULT 'N';
