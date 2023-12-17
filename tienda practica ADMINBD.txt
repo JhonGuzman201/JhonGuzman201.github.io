@@ -1,0 +1,54 @@
+"Like" es parecido
+ejemplo
+select * from personal
+where apellido like 'A%'
+
+
+select id_g from genero
+where descripcion = "Masculino"
+
+select * from persona where idgenero in (select idgenero from genero where descripcion "Masculino")
+
+
+
+Distinct 
+muestra ubn registro unico
+ejemplo
+select distinct apellido1 from persona
+
+
+Group by
+agrupa los datos
+ejemplo
+select apellido, count(apellido)
+from persona
+group by apellido
+
+
+
+select apellido, avg(edad), min(edad)
+from persona
+group by apellido
+
+
+
+max()   min()
+
+
+
+
+
+
+
+select * from personal
+where nombre LIKE '%M%'
+
+
+
+
+select o.idorden, p1.apellido1, p1.apellido2, p1.nombre, p2.apellido1, p2.apellido2, p2.nombre, o.fechaorden  from ordenes as o
+inner join personal as p1 on p1.idpersonal = o.idcliente
+inner join personal as p2 on p2.idpersonal = o.idempleado
+where fechaorden = '2023-01-20'
+
+
